@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 * {
   margin: 0;
@@ -7,7 +9,8 @@
 }
 
 body {
-  font-family: 'Comic Sans MS', 'Chalkboard SE', 'Bradley Hand', cursive, sans-serif;
+  font-family:
+    "Comic Sans MS", "Chalkboard SE", "Bradley Hand", cursive, sans-serif;
   overflow-x: hidden;
 }
 
