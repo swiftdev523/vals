@@ -7,6 +7,7 @@ import {
 import { useState, useEffect } from "react";
 import "./App.css";
 import Login from "./pages/Login";
+import ValentineQuestion from "./pages/ValentineQuestion";
 import Welcome from "./pages/Welcome";
 import Forever from "./pages/Forever";
 import Heart2Heart from "./pages/Heart2Heart";
@@ -38,8 +39,14 @@ function App() {
             !isAuthenticated ? (
               <Login onLogin={handleLogin} />
             ) : (
-              <Navigate to="/welcome" />
+              <Navigate to="/question" />
             )
+          }
+        />
+        <Route
+          path="/question"
+          element={
+            isAuthenticated ? <ValentineQuestion /> : <Navigate to="/" />
           }
         />
         <Route
