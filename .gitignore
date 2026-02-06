@@ -33,3 +33,7 @@ lerna-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# Large media files (host separately or use Git LFS)
+public/video.mp4
+public/*.mp4
