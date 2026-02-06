@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import PageLayout from "../components/PageLayout";
 import ContentCard from "../components/ContentCard";
 import FloatingNextButton from "../components/FloatingNextButton";
@@ -8,7 +8,6 @@ import { motion } from "framer-motion";
 
 const VideoMessage = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
 
   return (
     <PageLayout>
@@ -39,10 +38,7 @@ const VideoMessage = () => {
             <video
               ref={videoRef}
               className="w-full h-full object-cover"
-              controls
-              onPlay={() => setIsPlaying(true)}
-              onPause={() => setIsPlaying(false)}
-              onEnded={() => setIsPlaying(false)}>
+              controls>
               <source src="/video.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>

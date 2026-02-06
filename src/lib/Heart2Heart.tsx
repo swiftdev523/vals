@@ -1,15 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useRouter } from "next/navigation";
 import PageLayout from "../components/PageLayout";
 import ContentCard from "../components/ContentCard";
 import LoveLetter from "../components/LoveLetter";
 import FloatingNextButton from "../components/FloatingNextButton";
 
 const Heart2Heart = () => {
-  const router = useRouter();
-
   return (
     <PageLayout>
       <ContentCard maxWidth="max-w-4xl">
