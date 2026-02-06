@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import type { ReactNode } from "react";
 
@@ -16,7 +18,7 @@ const ContentCard = ({
 }: ContentCardProps) => {
   const card = (
     <div
-      className={`bg-white/95 backdrop-blur-lg rounded-3xl p-10 shadow-2xl 
+      className={`bg-white/95 backdrop-blur-lg rounded-3xl px-2 py-8 shadow-2xl 
                   ${maxWidth} w-full text-center relative z-20 
                   border-4 border-white/80 ${className}`}>
       {children}

@@ -1,73 +1,94 @@
-# React + TypeScript + Vite
+# 💕 Valentine's Day Website 💕
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A beautiful, romantic Valentine's Day website built with **Next.js 16**, **React 19**, and **Framer Motion**, featuring blazing-fast performance and smooth animations.
 
-Currently, two official plugins are available:
+## 🌟 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚡ **Next.js App Router** - Instant page transitions and optimized performance
+- 🔐 **Password Protection** - Secret word authentication (default: "forever")
+- 🎨 **Smooth Animations** - Powered by Framer Motion with optimized rendering
+- 💕 **6 Romantic Pages**:
+  - 🏠 **Home** - Password-protected entrance
+  - ❓ **Question** - Interactive "Will you be my Valentine?" with playful UI
+  - 🎉 **Welcome** - Celebration page with confetti
+  - 💑 **Forever** - Photo gallery and love list
+  - 💌 **Heart2Heart** - Heartfelt love letter
+  - 🌹 **Flowers** - Virtual rose bouquet with messages
+- 📱 **Fully Responsive** - Perfect on all devices
+- 🚀 **Turbopack** - Ultra-fast development with hot reload
 
-## React Compiler
+## 🚀 Quick Start
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. **Install dependencies**:
 
-## Expanding the ESLint configuration
+   ```bash
+   npm install
+   ```
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+2. **Start the development server**:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+   ```bash
+   npm run dev
+   ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+3. **Open your browser** at [http://localhost:3000](http://localhost:3000)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+4. **Enter the secret word**: Type "forever" to unlock
+
+## 🎨 Customization
+
+### Change Secret Word
+
+Edit `src/lib/Login.tsx` line 13:
+
+```typescript
+const SECRET_WORD = "forever"; // Change this
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Update Love Messages
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Welcome message**: `src/lib/Welcome.tsx`
+- **Love letter**: `src/lib/Heart2Heart.tsx`
+- **Flower messages**: `src/lib/Flowers.tsx`
+- **Love list**: `src/lib/Forever.tsx`
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Replace Photos
+
+Update photo URLs in `src/lib/Forever.tsx` with your own images.
+
+## 📦 Production Build
+
+```bash
+npm run build
+npm start
 ```
+
+## 🛠️ Tech Stack
+
+- **Next.js 16** - React framework with App Router
+- **React 19** - UI library
+- **TypeScript** - Type safety
+- **Framer Motion** - Animation library
+- **Tailwind CSS** - Utility-first styling
+- **Turbopack** - Next-generation bundler
+
+## 📁 Project Structure
+
+```
+├── app/                    # Next.js App Router
+│   ├── layout.tsx         # Root layout
+│   ├── page.tsx           # Home/Login page
+│   ├── question/          # Valentine question
+│   ├── welcome/           # Welcome page
+│   ├── forever/           # Photo gallery
+│   ├── heart2heart/       # Love letter
+│   └── flowers/           # Virtual bouquet
+├── src/
+│   ├── components/        # Reusable UI components
+│   └── lib/              # Page components
+└── public/               # Static assets
+```
+
+## 💝 Made with Love
+
+Perfect for Valentine's Day 2026! 🌹

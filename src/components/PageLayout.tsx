@@ -1,3 +1,5 @@
+"use client";
+
 import type { ReactNode } from "react";
 import FloatingHearts from "./FloatingHearts";
 import { motion } from "framer-motion";

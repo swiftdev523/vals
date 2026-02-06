@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./app/**/*.{js,ts,jsx,tsx}", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -18,12 +18,9 @@ export default {
         },
       },
       fontFamily: {
-        handwriting: [
-          "Comic Sans MS",
-          "Chalkboard SE",
-          "Bradley Hand",
-          "cursive",
-        ],
+        handwriting: ["var(--font-dancing)", "cursive"],
+        script: ["var(--font-pacifico)", "cursive"],
+        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
       },
       animation: {
         float: "float 15s linear infinite",

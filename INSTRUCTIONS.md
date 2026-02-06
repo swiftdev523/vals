@@ -1,18 +1,19 @@
-# 💕 Valentine's Day Website for Couples 💕
+# 💕 Valentine's Day Website - Instructions 💕
 
-A beautiful, romantic website built with React + Vite, featuring smooth animations and a pink love theme.
+A romantic website built with **Next.js 16**, featuring smooth animations and optimized performance.
 
 ## 🌟 Features
 
 - **Password Protection**: Secret word authentication (default: "forever")
-- **4 Romantic Pages**:
-  - 🏠 Welcome Page - Main landing with navigation
-  - 💑 Forever Page - Your couple photo and love list
-  - 💌 Heart2Heart - A heartfelt letter
+- **6 Romantic Pages**:
+  - 🏠 Home - Password-protected entrance
+  - ❓ Question - Interactive Valentine's question
+  - 🎉 Welcome - Main landing with navigation
+  - 💑 Forever - Photo gallery and love list
+  - 💌 Heart2Heart - Heartfelt letter
   - 🌹 Flowers - Virtual bouquet with love messages
 - **Smooth Animations**: Powered by Framer Motion
-- **Floating Hearts**: Continuous heart animations
-- **Pink Theme**: Beautiful gradient backgrounds
+- **Fast Performance**: Next.js 16 with Turbopack
 - **Responsive Design**: Works on all devices
 
 ## 🚀 Quick Start
@@ -26,44 +27,44 @@ A beautiful, romantic website built with React + Vite, featuring smooth animatio
 2. **Start the development server**:
 
    ```bash
-   npm run dev
+
    ```
-
-3. **Open your browser** and visit the URL shown in terminal (usually http://localhost:5174)
-
-4. **Enter the secret word**: Type "forever" (without quotes) to unlock the website
 
 ## 🎨 Customization
 
 ### Change the Secret Word
 
-Edit `src/pages/Login.tsx` and change line 13:
+Edit `src/lib/Login.tsx` line 16:
 
 ```typescript
 const SECRET_WORD = "forever"; // Change to your secret word
 ```
 
-### Add Your Couple Photo
+### Add Your Couple Photos
 
-Replace the placeholder in `src/pages/Forever.tsx`:
+Update photo URLs in `src/lib/Forever.tsx`:
 
-1. Add your image to the `public` folder (e.g., `couple-photo.jpg`)
-2. In `src/pages/Forever.tsx`, replace the placeholder div with:
-
-```tsx
-<img src="/couple-photo.jpg" alt="Us" className="photo-frame" />
+```typescript
+const couplePhotos = [
+  {
+    id: 1,
+    caption: "Our First Date 💕",
+    url: "YOUR_IMAGE_URL_HERE",
+  },
+  // Add more photos...
+];
 ```
 
 ### Customize Messages
 
-- **Welcome message**: Edit `src/pages/Welcome.tsx`
-- **Love letter**: Edit `src/pages/Heart2Heart.tsx`
-- **Love messages**: Edit `src/pages/Flowers.tsx`
-- **Love list**: Edit `src/pages/Forever.tsx`
+- **Welcome message**: Edit `src/lib/Welcome.tsx`
+- **Love letter**: Edit `src/lib/Heart2Heart.tsx`
+- **Flower messages**: Edit `src/lib/Flowers.tsx`
+- **Love list**: Edit `src/lib/Forever.tsx`
 
 ### Change Colors
 
-Edit `src/App.css` to customize the pink gradient and other colors:
+Edit `src/App.css` to customize the pink gradient:
 
 ```css
 .page-container {
@@ -71,22 +72,23 @@ Edit `src/App.css` to customize the pink gradient and other colors:
 }
 ```
 
-## 📱 Pages Navigation
+## 📱 Pages & Routes
 
-1. **Login** (`/`) - Password protection page
-2. **Welcome** (`/welcome`) - Main landing page
-3. **Forever** (`/forever`) - Couple photo and love list
-4. **Heart2Heart** (`/heart2heart`) - Romantic letter
-5. **Flowers** (`/flowers`) - Virtual flower bouquet
+1. **/** - Login page (password protection)
+2. **/question** - Valentine's question
+3. **/welcome** - Main landing page
+4. **/forever** - Photo gallery and love list
+5. **/heart2heart** - Romantic letter
+6. **/flowers** - Virtual flower bouquet
 
 ## 🛠️ Tech Stack
 
-- **Vite** - Lightning-fast build tool
-- **React** - UI framework
+- **Next.js 16** - React framework with App Router
+- **React 19** - UI library
 - **TypeScript** - Type safety
-- **React Router** - Navigation
 - **Framer Motion** - Smooth animations
-- **CSS3** - Styling and animations
+- **Tailwind CSS** - Utility-first styling
+- **Turbopack** - Next-generation bundler
 
 ## 📦 Build for Production
 
@@ -94,17 +96,19 @@ When you're ready to deploy:
 
 ```bash
 npm run build
+npm start
 ```
 
-This creates an optimized build in the `dist` folder.
+The optimized build will be in the `.next` folder.
 
 ## 💖 Tips
 
-- The password is stored in session storage, so it stays active during the browser session
+- Password is stored in session storage (stays active during browser session)
 - All animations are GPU-accelerated for smooth performance
-- The website is fully responsive and works on mobile devices
-- You can add more pages by creating new components in `src/pages/`
+- Fully responsive - works perfectly on mobile devices
+- Add more pages by creating new routes in the `app/` directory
+- Images are optimized automatically by Next.js
 
-## 🎁 Happy Valentine's Day!
+## 🎁 Happy Valentine's Day 2026!
 
 Enjoy sharing this special website with your loved one! 💕
