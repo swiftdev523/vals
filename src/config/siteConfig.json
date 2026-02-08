@@ -1,0 +1,70 @@
+{
+  "secretWord": "forever",
+  "adminPassword": "admin123",
+  "versions": [
+    {
+      "id": "default",
+      "name": "Default Version",
+      "active": true,
+      "secretWord": "forever",
+      "content": {
+        "login": {
+          "title": "For My Love",
+          "subtitle": "Enter the secret word to unlock your Valentine's surprise",
+          "emoji": "💝"
+        },
+        "question": {
+          "question": "Will you be my Valentine? 💖",
+          "yesText": "Yes! 💕",
+          "noText": "No 💔"
+        },
+        "welcome": {
+          "title": "You Said Yes! 🎉",
+          "message": "You've made me the happiest person in the world!",
+          "callToAction": "Let me show you why you're so special to me..."
+        },
+        "forever": {
+          "title": "These Moments With You",
+          "images": [
+            "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=800",
+            "https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?w=800",
+            "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800",
+            "https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?w=800"
+          ]
+        },
+        "heart2heart": {
+          "title": "Heart 2 Heart 💕",
+          "letter": {
+            "greeting": "To the love of my life,",
+            "body": [
+              "Every moment with you feels like a dream come true. Your smile lights up my world, and your laughter is my favorite sound. You make every day special just by being you.",
+              "I want you to know that you mean everything to me. You're not just my Valentine – you're my best friend, my confidant, and the love of my life.",
+              "Thank you for being you, for loving me, and for making my life so much better. I can't wait to create more beautiful memories with you.",
+              "I love you more than words can express."
+            ],
+            "signature": "Forever yours"
+          }
+        },
+        "flowers": {
+          "title": "A Bouquet Just For You 💐",
+          "messages": [
+            { "emoji": "🌹", "text": "Every rose represents a reason I love you" },
+            { "emoji": "💝", "text": "You have the key to my heart" },
+            { "emoji": "✨", "text": "You make my world sparkle" },
+            { "emoji": "🦋", "text": "You give me butterflies every day" },
+            { "emoji": "🌟", "text": "You're my shining star" },
+            { "emoji": "💕", "text": "My love for you grows stronger every day" }
+          ]
+        },
+        "video": {
+          "title": "A Special Message For You",
+          "messages": [
+            "Every moment with you is precious",
+            "You make my heart skip a beat",
+            "I'm so grateful to have you in my life"
+          ]
+        }
+      }
+    }
+  ]
+}
