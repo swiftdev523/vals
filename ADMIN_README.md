@@ -9,42 +9,51 @@
 ## Features
 
 ### 🔐 General Settings
+
 - **Secret Word**: Change the password users need to enter to access the website
 - **Admin Password**: Change your admin dashboard password
 
 ### 📝 Content Management
+
 Edit all text content across the website:
 
 #### Login Page
+
 - Emoji
 - Title
 - Subtitle text
 
 #### Question Page
+
 - Question text
 - "Yes" button text
 - "No" button text
 
 #### Welcome Page
+
 - Title
 - Welcome message
 - Call to action text
 
 #### Photo Gallery (Forever Page)
+
 - Page title
 - Image URLs (add/edit multiple images)
 
 #### Love Letter (Heart2Heart Page)
+
 - Page title
 - Letter greeting
 - Four paragraphs of letter content
 - Letter signature
 
 #### Flowers Page
+
 - Page title
 - Six customizable love messages (emoji + text for each)
 
 #### Video Page
+
 - Page title
 - Three overlay messages
 - Note: To change the video, replace `public/video.mp4`
@@ -64,7 +73,8 @@ You can manually edit this file if needed, or use the dashboard interface.
 
 ## Security Notes
 
-⚠️ **Important**: 
+⚠️ **Important**:
+
 - Change the default admin password immediately after first login
 - In production, implement proper authentication (OAuth, JWT, etc.)
 - Consider adding IP restrictions for admin routes
@@ -81,6 +91,7 @@ The config supports multiple versions of the website. To create a new version:
 5. Set `active: true` for the version you want to use
 
 Example:
+
 ```json
 {
   "versions": [
@@ -105,6 +116,7 @@ Example:
 ## Future Enhancements
 
 Planned features:
+
 - [ ] Image upload functionality
 - [ ] Video upload support
 - [ ] Multiple language support

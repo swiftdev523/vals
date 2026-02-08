@@ -48,12 +48,18 @@
         "flowers": {
           "title": "A Bouquet Just For You 💐",
           "messages": [
-            { "emoji": "🌹", "text": "Every rose represents a reason I love you" },
+            {
+              "emoji": "🌹",
+              "text": "Every rose represents a reason I love you"
+            },
             { "emoji": "💝", "text": "You have the key to my heart" },
             { "emoji": "✨", "text": "You make my world sparkle" },
             { "emoji": "🦋", "text": "You give me butterflies every day" },
             { "emoji": "🌟", "text": "You're my shining star" },
-            { "emoji": "💕", "text": "My love for you grows stronger every day" }
+            {
+              "emoji": "💕",
+              "text": "My love for you grows stronger every day"
+            }
           ]
         },
         "video": {

@@ -20,7 +20,7 @@ const Login = ({ onLogin }: LoginProps) => {
   const loginContent = config?.versions?.[0]?.content?.login || {
     emoji: "💝",
     title: "For My Love",
-    subtitle: "Enter the secret word to unlock your Valentine's surprise"
+    subtitle: "Enter the secret word to unlock your Valentine's surprise",
   };
 
   const handleSubmit = (e: React.FormEvent) => {

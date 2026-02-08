@@ -13,7 +13,7 @@ export default function AdminLoginPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // In production, use a secure API endpoint
     if (password === "admin123") {
       localStorage.setItem("adminAuth", "true");

@@ -8,6 +8,9 @@ import { motion } from "framer-motion";
 
 const VideoMessage = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
+  
+  // Support external video URL via environment variable for production
+  const videoUrl = process.env.NEXT_PUBLIC_VIDEO_URL || "/video.mp4";
 
   return (
     <PageLayout>
@@ -38,8 +41,9 @@ const VideoMessage = () => {
             <video
               ref={videoRef}
               className="w-full h-full object-cover"
-              controls>
-              <source src="/video.mp4" type="video/mp4" />
+              controls
+              playsInline>
+              <source src={videoUrl} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
 

@@ -3,49 +3,62 @@
 ## 🚀 Accessing Your Admin Dashboard
 
 ### Step 1: Start the Website
+
 ```bash
 npm run dev
 ```
 
 ### Step 2: Open Admin Panel
+
 Navigate to: `http://localhost:3000/admin`
 
 ### Step 3: Login
+
 - **Password**: `admin123`
 - Click "Login"
 
 ### Step 4: Manage Content
+
 You'll see the dashboard with these sections:
 
 #### ⚙️ General Settings
+
 - Change the **secret word** users enter to access the website
 - Update your **admin password**
 
 #### 🔐 Login Page
+
 - Customize emoji, title, and subtitle
 
 #### ❓ Question Page
+
 - Edit the question text
 - Customize "Yes" and "No" button text
 
 #### 🎉 Welcome Page
+
 - Modify celebration messages
 
 #### 📸 Forever (Photos)
+
 - Add/edit image URLs
 - Change page title
 
 #### 💌 Love Letter
+
 - Edit greeting, paragraphs, and signature
 
 #### 💐 Flowers
+
 - Customize 6 love messages with emojis
 
 #### 🎥 Video
+
 - Edit overlay messages
 - (Replace video file in `public/video.mp4`)
 
 ### Step 5: Save Changes
+
 Click the **"💾 Save Changes"** button at the top right
 
 ## 🔒 Security
@@ -102,16 +115,19 @@ After editing, refresh the website to see changes.
 ## ❓ Troubleshooting
 
 **Can't access dashboard?**
+
 - Check if the server is running (`npm run dev`)
 - Try clearing browser cache
 - Verify you're using the correct password
 
 **Changes not showing?**
+
 - Click "Save Changes" button
 - Refresh the main website
 - Check browser console for errors
 
 **Lost admin password?**
+
 - Edit `src/config/siteConfig.json`
 - Find `"adminPassword"` and change it
 - Restart the server
@@ -119,6 +135,7 @@ After editing, refresh the website to see changes.
 ## 🚀 Deploy to Production
 
 When deploying:
+
 1. Change all default passwords
 2. Consider using a real database (MongoDB, Supabase)
 3. Implement proper authentication (NextAuth.js)

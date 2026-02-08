@@ -72,7 +72,7 @@ export default function AdminDashboard() {
                 },
               },
             }
-          : v
+          : v,
       ),
     }));
   };
@@ -90,14 +90,14 @@ export default function AdminDashboard() {
                   ...v.content.heart2heart,
                   letter: {
                     ...v.content.heart2heart.letter,
-                    body: v.content.heart2heart.letter.body.map((text: string, i: number) =>
-                      i === index ? value : text
+                    body: v.content.heart2heart.letter.body.map(
+                      (text: string, i: number) => (i === index ? value : text),
                     ),
                   },
                 },
               },
             }
-          : v
+          : v,
       ),
     }));
   };
@@ -113,13 +113,14 @@ export default function AdminDashboard() {
                 ...v.content,
                 flowers: {
                   ...v.content.flowers,
-                  messages: v.content.flowers.messages.map((msg: any, i: number) =>
-                    i === index ? { ...msg, [field]: value } : msg
+                  messages: v.content.flowers.messages.map(
+                    (msg: any, i: number) =>
+                      i === index ? { ...msg, [field]: value } : msg,
                   ),
                 },
               },
             }
-          : v
+          : v,
       ),
     }));
   };
@@ -144,7 +145,9 @@ export default function AdminDashboard() {
               <h1 className="text-3xl md:text-4xl font-bold text-pink-600 mb-2">
                 Admin Dashboard 🎛️
               </h1>
-              <p className="text-gray-600">Manage your Valentine's website content</p>
+              <p className="text-gray-600">
+                Manage your Valentine's website content
+              </p>
             </div>
             <div className="flex gap-4">
               <button
@@ -207,8 +210,10 @@ export default function AdminDashboard() {
           {/* General Settings */}
           {activeTab === "general" && (
             <div className="space-y-6">
-              <h2 className="text-2xl font-bold text-pink-600 mb-4">General Settings</h2>
-              
+              <h2 className="text-2xl font-bold text-pink-600 mb-4">
+                General Settings
+              </h2>
+
               <div>
                 <label className="block text-lg font-bold text-gray-700 mb-2">
                   Secret Word (for login)
@@ -216,7 +221,9 @@ export default function AdminDashboard() {
                 <input
                   type="text"
                   value={config.secretWord}
-                  onChange={(e) => setConfig({ ...config, secretWord: e.target.value })}
+                  onChange={(e) =>
+                    setConfig({ ...config, secretWord: e.target.value })
+                  }
                   className="w-full px-4 py-3 border-2 border-pink-300 rounded-xl focus:outline-none 
                            focus:border-pink-500 focus:ring-4 focus:ring-pink-200"
                   placeholder="e.g., forever"
@@ -233,7 +240,9 @@ export default function AdminDashboard() {
                 <input
                   type="password"
                   value={config.adminPassword}
-                  onChange={(e) => setConfig({ ...config, adminPassword: e.target.value })}
+                  onChange={(e) =>
+                    setConfig({ ...config, adminPassword: e.target.value })
+                  }
                   className="w-full px-4 py-3 border-2 border-pink-300 rounded-xl focus:outline-none 
                            focus:border-pink-500 focus:ring-4 focus:ring-pink-200"
                   placeholder="Enter new admin password"
@@ -248,35 +257,49 @@ export default function AdminDashboard() {
           {/* Login Page */}
           {activeTab === "login" && activeVersion && (
             <div className="space-y-6">
-              <h2 className="text-2xl font-bold text-pink-600 mb-4">Login Page Content</h2>
-              
+              <h2 className="text-2xl font-bold text-pink-600 mb-4">
+                Login Page Content
+              </h2>
+
               <div>
-                <label className="block text-lg font-bold text-gray-700 mb-2">Emoji</label>
+                <label className="block text-lg font-bold text-gray-700 mb-2">
+                  Emoji
+                </label>
                 <input
                   type="text"
                   value={activeVersion.content.login.emoji}
-                  onChange={(e) => updateContent("login", "emoji", e.target.value)}
+                  onChange={(e) =>
+                    updateContent("login", "emoji", e.target.value)
+                  }
                   className="w-full px-4 py-3 border-2 border-pink-300 rounded-xl focus:outline-none 
                            focus:border-pink-500 focus:ring-4 focus:ring-pink-200"
                 />
               </div>
 
               <div>
-                <label className="block text-lg font-bold text-gray-700 mb-2">Title</label>
+                <label className="block text-lg font-bold text-gray-700 mb-2">
+                  Title
+                </label>
                 <input
                   type="text"
                   value={activeVersion.content.login.title}
-                  onChange={(e) => updateContent("login", "title", e.target.value)}
+                  onChange={(e) =>
+                    updateContent("login", "title", e.target.value)
+                  }
                   className="w-full px-4 py-3 border-2 border-pink-300 rounded-xl focus:outline-none 
                            focus:border-pink-500 focus:ring-4 focus:ring-pink-200"
                 />
               </div>
 
               <div>
-                <label className="block text-lg font-bold text-gray-700 mb-2">Subtitle</label>
+                <label className="block text-lg font-bold text-gray-700 mb-2">
+                  Subtitle
+                </label>
                 <textarea
                   value={activeVersion.content.login.subtitle}
-                  onChange={(e) => updateContent("login", "subtitle", e.target.value)}
+                  onChange={(e) =>
+                    updateContent("login", "subtitle", e.target.value)
+                  }
                   rows={3}
                   className="w-full px-4 py-3 border-2 border-pink-300 rounded-xl focus:outline-none 
                            focus:border-pink-500 focus:ring-4 focus:ring-pink-200"
@@ -288,14 +311,20 @@ export default function AdminDashboard() {
           {/* Question Page */}
           {activeTab === "question" && activeVersion && (
             <div className="space-y-6">
-              <h2 className="text-2xl font-bold text-pink-600 mb-4">Question Page Content</h2>
-              
+              <h2 className="text-2xl font-bold text-pink-600 mb-4">
+                Question Page Content
+              </h2>
+
               <div>
-                <label className="block text-lg font-bold text-gray-700 mb-2">Question Text</label>
+                <label className="block text-lg font-bold text-gray-700 mb-2">
+                  Question Text
+                </label>
                 <input
                   type="text"
                   value={activeVersion.content.question.question}
-                  onChange={(e) => updateContent("question", "question", e.target.value)}
+                  onChange={(e) =>
+                    updateContent("question", "question", e.target.value)
+                  }
                   className="w-full px-4 py-3 border-2 border-pink-300 rounded-xl focus:outline-none 
                            focus:border-pink-500 focus:ring-4 focus:ring-pink-200"
                 />
@@ -303,22 +332,30 @@ export default function AdminDashboard() {
 
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-lg font-bold text-gray-700 mb-2">Yes Button Text</label>
+                  <label className="block text-lg font-bold text-gray-700 mb-2">
+                    Yes Button Text
+                  </label>
                   <input
                     type="text"
                     value={activeVersion.content.question.yesText}
-                    onChange={(e) => updateContent("question", "yesText", e.target.value)}
+                    onChange={(e) =>
+                      updateContent("question", "yesText", e.target.value)
+                    }
                     className="w-full px-4 py-3 border-2 border-pink-300 rounded-xl focus:outline-none 
                              focus:border-pink-500 focus:ring-4 focus:ring-pink-200"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-lg font-bold text-gray-700 mb-2">No Button Text</label>
+                  <label className="block text-lg font-bold text-gray-700 mb-2">
+                    No Button Text
+                  </label>
                   <input
                     type="text"
                     value={activeVersion.content.question.noText}
-                    onChange={(e) => updateContent("question", "noText", e.target.value)}
+                    onChange={(e) =>
+                      updateContent("question", "noText", e.target.value)
+                    }
                     className="w-full px-4 py-3 border-2 border-pink-300 rounded-xl focus:outline-none 
                              focus:border-pink-500 focus:ring-4 focus:ring-pink-200"
                   />
@@ -330,24 +367,34 @@ export default function AdminDashboard() {
           {/* Welcome Page */}
           {activeTab === "welcome" && activeVersion && (
             <div className="space-y-6">
-              <h2 className="text-2xl font-bold text-pink-600 mb-4">Welcome Page Content</h2>
-              
+              <h2 className="text-2xl font-bold text-pink-600 mb-4">
+                Welcome Page Content
+              </h2>
+
               <div>
-                <label className="block text-lg font-bold text-gray-700 mb-2">Title</label>
+                <label className="block text-lg font-bold text-gray-700 mb-2">
+                  Title
+                </label>
                 <input
                   type="text"
                   value={activeVersion.content.welcome.title}
-                  onChange={(e) => updateContent("welcome", "title", e.target.value)}
+                  onChange={(e) =>
+                    updateContent("welcome", "title", e.target.value)
+                  }
                   className="w-full px-4 py-3 border-2 border-pink-300 rounded-xl focus:outline-none 
                            focus:border-pink-500 focus:ring-4 focus:ring-pink-200"
                 />
               </div>
 
               <div>
-                <label className="block text-lg font-bold text-gray-700 mb-2">Message</label>
+                <label className="block text-lg font-bold text-gray-700 mb-2">
+                  Message
+                </label>
                 <textarea
                   value={activeVersion.content.welcome.message}
-                  onChange={(e) => updateContent("welcome", "message", e.target.value)}
+                  onChange={(e) =>
+                    updateContent("welcome", "message", e.target.value)
+                  }
                   rows={3}
                   className="w-full px-4 py-3 border-2 border-pink-300 rounded-xl focus:outline-none 
                            focus:border-pink-500 focus:ring-4 focus:ring-pink-200"
@@ -355,11 +402,15 @@ export default function AdminDashboard() {
               </div>
 
               <div>
-                <label className="block text-lg font-bold text-gray-700 mb-2">Call to Action</label>
+                <label className="block text-lg font-bold text-gray-700 mb-2">
+                  Call to Action
+                </label>
                 <input
                   type="text"
                   value={activeVersion.content.welcome.callToAction}
-                  onChange={(e) => updateContent("welcome", "callToAction", e.target.value)}
+                  onChange={(e) =>
+                    updateContent("welcome", "callToAction", e.target.value)
+                  }
                   className="w-full px-4 py-3 border-2 border-pink-300 rounded-xl focus:outline-none 
                            focus:border-pink-500 focus:ring-4 focus:ring-pink-200"
                 />
@@ -370,14 +421,20 @@ export default function AdminDashboard() {
           {/* Photo Gallery */}
           {activeTab === "forever" && activeVersion && (
             <div className="space-y-6">
-              <h2 className="text-2xl font-bold text-pink-600 mb-4">Photo Gallery</h2>
-              
+              <h2 className="text-2xl font-bold text-pink-600 mb-4">
+                Photo Gallery
+              </h2>
+
               <div>
-                <label className="block text-lg font-bold text-gray-700 mb-2">Title</label>
+                <label className="block text-lg font-bold text-gray-700 mb-2">
+                  Title
+                </label>
                 <input
                   type="text"
                   value={activeVersion.content.forever.title}
-                  onChange={(e) => updateContent("forever", "title", e.target.value)}
+                  onChange={(e) =>
+                    updateContent("forever", "title", e.target.value)
+                  }
                   className="w-full px-4 py-3 border-2 border-pink-300 rounded-xl focus:outline-none 
                            focus:border-pink-500 focus:ring-4 focus:ring-pink-200"
                 />
@@ -390,7 +447,11 @@ export default function AdminDashboard() {
                 <textarea
                   value={activeVersion.content.forever.images.join("\n")}
                   onChange={(e) =>
-                    updateContent("forever", "images", e.target.value.split("\n").filter(Boolean))
+                    updateContent(
+                      "forever",
+                      "images",
+                      e.target.value.split("\n").filter(Boolean),
+                    )
                   }
                   rows={8}
                   className="w-full px-4 py-3 border-2 border-pink-300 rounded-xl focus:outline-none 
@@ -407,21 +468,29 @@ export default function AdminDashboard() {
           {/* Love Letter */}
           {activeTab === "letter" && activeVersion && (
             <div className="space-y-6">
-              <h2 className="text-2xl font-bold text-pink-600 mb-4">Love Letter Content</h2>
-              
+              <h2 className="text-2xl font-bold text-pink-600 mb-4">
+                Love Letter Content
+              </h2>
+
               <div>
-                <label className="block text-lg font-bold text-gray-700 mb-2">Title</label>
+                <label className="block text-lg font-bold text-gray-700 mb-2">
+                  Title
+                </label>
                 <input
                   type="text"
                   value={activeVersion.content.heart2heart.title}
-                  onChange={(e) => updateContent("heart2heart", "title", e.target.value)}
+                  onChange={(e) =>
+                    updateContent("heart2heart", "title", e.target.value)
+                  }
                   className="w-full px-4 py-3 border-2 border-pink-300 rounded-xl focus:outline-none 
                            focus:border-pink-500 focus:ring-4 focus:ring-pink-200"
                 />
               </div>
 
               <div>
-                <label className="block text-lg font-bold text-gray-700 mb-2">Greeting</label>
+                <label className="block text-lg font-bold text-gray-700 mb-2">
+                  Greeting
+                </label>
                 <input
                   type="text"
                   value={activeVersion.content.heart2heart.letter.greeting}
@@ -443,7 +512,7 @@ export default function AdminDashboard() {
                                 },
                               },
                             }
-                          : v
+                          : v,
                       ),
                     }))
                   }
@@ -453,25 +522,33 @@ export default function AdminDashboard() {
               </div>
 
               <div>
-                <label className="block text-lg font-bold text-gray-700 mb-4">Letter Paragraphs</label>
-                {activeVersion.content.heart2heart.letter.body.map((paragraph: string, index: number) => (
-                  <div key={index} className="mb-4">
-                    <label className="block text-sm font-semibold text-gray-600 mb-2">
-                      Paragraph {index + 1}
-                    </label>
-                    <textarea
-                      value={paragraph}
-                      onChange={(e) => updateLetterBody(index, e.target.value)}
-                      rows={3}
-                      className="w-full px-4 py-3 border-2 border-pink-300 rounded-xl focus:outline-none 
+                <label className="block text-lg font-bold text-gray-700 mb-4">
+                  Letter Paragraphs
+                </label>
+                {activeVersion.content.heart2heart.letter.body.map(
+                  (paragraph: string, index: number) => (
+                    <div key={index} className="mb-4">
+                      <label className="block text-sm font-semibold text-gray-600 mb-2">
+                        Paragraph {index + 1}
+                      </label>
+                      <textarea
+                        value={paragraph}
+                        onChange={(e) =>
+                          updateLetterBody(index, e.target.value)
+                        }
+                        rows={3}
+                        className="w-full px-4 py-3 border-2 border-pink-300 rounded-xl focus:outline-none 
                                focus:border-pink-500 focus:ring-4 focus:ring-pink-200"
-                    />
-                  </div>
-                ))}
+                      />
+                    </div>
+                  ),
+                )}
               </div>
 
               <div>
-                <label className="block text-lg font-bold text-gray-700 mb-2">Signature</label>
+                <label className="block text-lg font-bold text-gray-700 mb-2">
+                  Signature
+                </label>
                 <input
                   type="text"
                   value={activeVersion.content.heart2heart.letter.signature}
@@ -493,7 +570,7 @@ export default function AdminDashboard() {
                                 },
                               },
                             }
-                          : v
+                          : v,
                       ),
                     }))
                   }
@@ -507,50 +584,74 @@ export default function AdminDashboard() {
           {/* Flowers Page */}
           {activeTab === "flowers" && activeVersion && (
             <div className="space-y-6">
-              <h2 className="text-2xl font-bold text-pink-600 mb-4">Flowers Page Content</h2>
-              
+              <h2 className="text-2xl font-bold text-pink-600 mb-4">
+                Flowers Page Content
+              </h2>
+
               <div>
-                <label className="block text-lg font-bold text-gray-700 mb-2">Title</label>
+                <label className="block text-lg font-bold text-gray-700 mb-2">
+                  Title
+                </label>
                 <input
                   type="text"
                   value={activeVersion.content.flowers.title}
-                  onChange={(e) => updateContent("flowers", "title", e.target.value)}
+                  onChange={(e) =>
+                    updateContent("flowers", "title", e.target.value)
+                  }
                   className="w-full px-4 py-3 border-2 border-pink-300 rounded-xl focus:outline-none 
                            focus:border-pink-500 focus:ring-4 focus:ring-pink-200"
                 />
               </div>
 
               <div>
-                <label className="block text-lg font-bold text-gray-700 mb-4">Love Messages</label>
-                {activeVersion.content.flowers.messages.map((message: any, index: number) => (
-                  <div key={index} className="mb-4 p-4 border-2 border-pink-200 rounded-xl">
-                    <label className="block text-sm font-semibold text-gray-600 mb-2">
-                      Message {index + 1}
-                    </label>
-                    <div className="grid md:grid-cols-4 gap-4">
-                      <div>
-                        <label className="block text-xs text-gray-500 mb-1">Emoji</label>
-                        <input
-                          type="text"
-                          value={message.emoji}
-                          onChange={(e) => updateFlowerMessage(index, "emoji", e.target.value)}
-                          className="w-full px-3 py-2 border-2 border-pink-300 rounded-lg focus:outline-none 
+                <label className="block text-lg font-bold text-gray-700 mb-4">
+                  Love Messages
+                </label>
+                {activeVersion.content.flowers.messages.map(
+                  (message: any, index: number) => (
+                    <div
+                      key={index}
+                      className="mb-4 p-4 border-2 border-pink-200 rounded-xl">
+                      <label className="block text-sm font-semibold text-gray-600 mb-2">
+                        Message {index + 1}
+                      </label>
+                      <div className="grid md:grid-cols-4 gap-4">
+                        <div>
+                          <label className="block text-xs text-gray-500 mb-1">
+                            Emoji
+                          </label>
+                          <input
+                            type="text"
+                            value={message.emoji}
+                            onChange={(e) =>
+                              updateFlowerMessage(
+                                index,
+                                "emoji",
+                                e.target.value,
+                              )
+                            }
+                            className="w-full px-3 py-2 border-2 border-pink-300 rounded-lg focus:outline-none 
                                    focus:border-pink-500"
-                        />
-                      </div>
-                      <div className="md:col-span-3">
-                        <label className="block text-xs text-gray-500 mb-1">Message Text</label>
-                        <input
-                          type="text"
-                          value={message.text}
-                          onChange={(e) => updateFlowerMessage(index, "text", e.target.value)}
-                          className="w-full px-3 py-2 border-2 border-pink-300 rounded-lg focus:outline-none 
+                          />
+                        </div>
+                        <div className="md:col-span-3">
+                          <label className="block text-xs text-gray-500 mb-1">
+                            Message Text
+                          </label>
+                          <input
+                            type="text"
+                            value={message.text}
+                            onChange={(e) =>
+                              updateFlowerMessage(index, "text", e.target.value)
+                            }
+                            className="w-full px-3 py-2 border-2 border-pink-300 rounded-lg focus:outline-none 
                                    focus:border-pink-500"
-                        />
+                          />
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  ),
+                )}
               </div>
             </div>
           )}
@@ -558,61 +659,75 @@ export default function AdminDashboard() {
           {/* Video Page */}
           {activeTab === "video" && activeVersion && (
             <div className="space-y-6">
-              <h2 className="text-2xl font-bold text-pink-600 mb-4">Video Page Content</h2>
-              
+              <h2 className="text-2xl font-bold text-pink-600 mb-4">
+                Video Page Content
+              </h2>
+
               <div>
-                <label className="block text-lg font-bold text-gray-700 mb-2">Title</label>
+                <label className="block text-lg font-bold text-gray-700 mb-2">
+                  Title
+                </label>
                 <input
                   type="text"
                   value={activeVersion.content.video.title}
-                  onChange={(e) => updateContent("video", "title", e.target.value)}
+                  onChange={(e) =>
+                    updateContent("video", "title", e.target.value)
+                  }
                   className="w-full px-4 py-3 border-2 border-pink-300 rounded-xl focus:outline-none 
                            focus:border-pink-500 focus:ring-4 focus:ring-pink-200"
                 />
               </div>
 
               <div>
-                <label className="block text-lg font-bold text-gray-700 mb-4">Overlay Messages</label>
-                {activeVersion.content.video.messages.map((message: string, index: number) => (
-                  <div key={index} className="mb-4">
-                    <label className="block text-sm font-semibold text-gray-600 mb-2">
-                      Message {index + 1}
-                    </label>
-                    <input
-                      type="text"
-                      value={message}
-                      onChange={(e) =>
-                        setConfig((prev: any) => ({
-                          ...prev,
-                          versions: prev.versions.map((v: any) =>
-                            v.id === "default"
-                              ? {
-                                  ...v,
-                                  content: {
-                                    ...v.content,
-                                    video: {
-                                      ...v.content.video,
-                                      messages: v.content.video.messages.map((msg: string, i: number) =>
-                                        i === index ? e.target.value : msg
-                                      ),
+                <label className="block text-lg font-bold text-gray-700 mb-4">
+                  Overlay Messages
+                </label>
+                {activeVersion.content.video.messages.map(
+                  (message: string, index: number) => (
+                    <div key={index} className="mb-4">
+                      <label className="block text-sm font-semibold text-gray-600 mb-2">
+                        Message {index + 1}
+                      </label>
+                      <input
+                        type="text"
+                        value={message}
+                        onChange={(e) =>
+                          setConfig((prev: any) => ({
+                            ...prev,
+                            versions: prev.versions.map((v: any) =>
+                              v.id === "default"
+                                ? {
+                                    ...v,
+                                    content: {
+                                      ...v.content,
+                                      video: {
+                                        ...v.content.video,
+                                        messages: v.content.video.messages.map(
+                                          (msg: string, i: number) =>
+                                            i === index ? e.target.value : msg,
+                                        ),
+                                      },
                                     },
-                                  },
-                                }
-                              : v
-                          ),
-                        }))
-                      }
-                      className="w-full px-4 py-3 border-2 border-pink-300 rounded-xl focus:outline-none 
+                                  }
+                                : v,
+                            ),
+                          }))
+                        }
+                        className="w-full px-4 py-3 border-2 border-pink-300 rounded-xl focus:outline-none 
                                focus:border-pink-500 focus:ring-4 focus:ring-pink-200"
-                    />
-                  </div>
-                ))}
+                      />
+                    </div>
+                  ),
+                )}
               </div>
 
               <div className="p-4 bg-blue-50 border-2 border-blue-200 rounded-xl">
                 <p className="text-blue-800">
                   <strong>Note:</strong> To change the video file, replace{" "}
-                  <code className="bg-blue-200 px-2 py-1 rounded">public/video.mp4</code> with your new video file.
+                  <code className="bg-blue-200 px-2 py-1 rounded">
+                    public/video.mp4
+                  </code>{" "}
+                  with your new video file.
                 </p>
               </div>
             </div>
